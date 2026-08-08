@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice Mix | Helados y bebidas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <nav class="nav">
+          <a href="#" class="brand" data-bind="brand">ICE MIX</a>
+          <ul>
+            <li><a href="#sabores">Sabores</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="hero-content">
+          <div>
+            <p class="eyebrow" data-bind="eyebrow">Granizados frescos • Cocteles fríos • Dulce momento</p>
+            <h1 data-bind="headline">ICE MIX SABORES MIX</h1>
+            <p data-bind="heroText">
+              Descubre combinaciones irresistibles con frutas, sabores tropicales y
+              una mezcla única de granizados y cocteles para disfrutar al máximo.
+            </p>
+            <a class="btn" href="#contacto" data-bind="buttonText">Pide tu bebida</a>
+          </div>
+
+          <div class="hero-card">
+            <h3 data-bind="recommendTitle">Hoy te recomendamos</h3>
+            <p data-bind="recommendName">Tropical Sunrise</p>
+            <span data-bind="recommendDesc">Piña, mango y un toque de limón</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="adminPanel" class="config-panel hidden">
+      <div class="container">
+        <div class="panel-header">
+          <h2>Configuración editable</h2>
+          <p>Cambia textos, colores y el contenido de la página desde aquí.</p>
+        </div>
+
+        <form id="configForm" class="config-form">
+          <div class="form-grid">
+            <label>
+              Nombre de la marca
+              <input type="text" name="brand" placeholder="ICE MIX" />
+            </label>
+            <label>
+              Texto destacado
+              <input type="text" name="eyebrow" placeholder="Helados artesanales" />
+            </label>
+            <label>
+              Título principal
+              <input type="text" name="headline" placeholder="El sabor que enfría tu día" />
+            </label>
+            <label>
+              Texto del hero
+              <input type="text" name="heroText" placeholder="Descripción del negocio" />
+            </label>
+            <label>
+              Texto del botón
+              <input type="text" name="buttonText" placeholder="Pide tu combo" />
+            </label>
+            <label>
+              Título sabores
+              <input type="text" name="flavorsTitle" placeholder="Sabores estrella" />
+            </label>
+            <label>
+              Sabor 1
+              <input type="text" name="flavorOneTitle" placeholder="Choco Blast" />
+            </label>
+            <label>
+              Descripción sabor 1
+              <input type="text" name="flavorOneText" placeholder="Descripción" />
+            </label>
+            <label>
+              Sabor 2
+              <input type="text" name="flavorTwoTitle" placeholder="Berry Splash" />
+            </label>
+            <label>
+              Descripción sabor 2
+              <input type="text" name="flavorTwoText" placeholder="Descripción" />
+            </label>
+            <label>
+              Sabor 3
+              <input type="text" name="flavorThreeTitle" placeholder="Vanilla Dream" />
+            </label>
+            <label>
+              Descripción sabor 3
+              <input type="text" name="flavorThreeText" placeholder="Descripción" />
+            </label>
+            <label>
+              Título nosotros
+              <input type="text" name="aboutTitle" placeholder="Un espacio fresco" />
+            </label>
+            <label>
+              Texto nosotros
+              <input type="text" name="aboutText" placeholder="Descripción" />
+            </label>
+            <label>
+              Título destacado
+              <input type="text" name="highlightTitle" placeholder="✨ Servicio rápido" />
+            </label>
+            <label>
+              Texto destacado
+              <input type="text" name="highlightText" placeholder="Descripción" />
+            </label>
+            <label>
+              Teléfono
+              <input type="text" name="phone" placeholder="+57 300 123 4567" />
+            </label>
+            <label>
+              Correo
+              <input type="text" name="email" placeholder="hola@icemix.com" />
+            </label>
+            <label>
+              Horario
+              <input type="text" name="hours" placeholder="Lunes a Domingo" />
+            </label>
+          </div>
+
+          <div class="color-grid">
+            <label>
+              Color principal
+              <input type="color" name="primary" />
+            </label>
+            <label>
+              Color secundario
+              <input type="color" name="secondary" />
+            </label>
+            <label>
+              Fondo general
+              <input type="color" name="background" />
+            </label>
+            <label>
+              Color del texto
+              <input type="color" name="text" />
+            </label>
+            <label>
+              Color de superficies
+              <input type="color" name="surface" />
+            </label>
+          </div>
+
+          <div class="image-section">
+            <h3>Imágenes de bebidas</h3>
+            <p>Sube una imagen para cada bebida y se mostrará en la página.</p>
+            <div class="image-grid">
+              <label>
+                Bebida 1
+                <input type="text" name="image1" placeholder="URL o nombre de archivo" />
+              </label>
+              <label>
+                Bebida 2
+                <input type="text" name="image2" placeholder="URL o nombre de archivo" />
+              </label>
+              <label>
+                Bebida 3
+                <input type="text" name="image3" placeholder="URL o nombre de archivo" />
+              </label>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn btn-dark">Guardar cambios</button>
+            <button type="button" id="resetBtn" class="btn btn-light">Restablecer</button>
+          </div>
+          <p id="statusMessage" class="status">Los cambios se guardan automáticamente.</p>
+        </form>
+      </div>
+    </section>
+
+    <main>
+      <section id="sabores" class="section">
+        <div class="container">
+          <h2 data-bind="flavorsTitle">Sabores estrella</h2>
+          <div class="cards">
+            <article class="card">
+              <img class="drink-image" data-bind-image="image1" src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=800&q=80" alt="Bebida 1" />
+              <h3 data-bind="flavorOneTitle">Mango Passion</h3>
+              <p data-bind="flavorOneText">Granizado tropical con mango, maracuyá y hielo finísimo.</p>
+            </article>
+            <article class="card">
+              <img class="drink-image" data-bind-image="image2" src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80" alt="Bebida 2" />
+              <h3 data-bind="flavorTwoTitle">Berry Breeze</h3>
+              <p data-bind="flavorTwoText">Coctel refrescante con fresa, mora y un toque cítrico.</p>
+            </article>
+            <article class="card">
+              <img class="drink-image" data-bind-image="image3" src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Bebida 3" />
+              <h3 data-bind="flavorThreeTitle">Coco Splash</h3>
+              <p data-bind="flavorThreeText">Granizado cremoso con coco, piña y un sabor muy tropical.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="nosotros" class="section alt">
+        <div class="container about">
+          <div>
+            <p class="eyebrow" data-bind="aboutEyebrow">¿Por qué elegir Ice Mix?</p>
+            <h2 data-bind="aboutTitle">Un espacio fresco, alegre y lleno de sabor</h2>
+            <p data-bind="aboutText">
+              Ice Mix nace para ofrecerte experiencias refrescantes con un estilo moderno,
+              atención cercana y bebidas preparadas con frutas frescas y mucho sabor.
+            </p>
+          </div>
+          <div class="highlight-box">
+            <h3 data-bind="highlightTitle">✨ Refrescante y rápido</h3>
+            <p data-bind="highlightText">Preparación en minutos y bebidas ideales para compartir y disfrutar.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="section">
+        <div class="container contact">
+          <div>
+            <p class="eyebrow" data-bind="contactEyebrow">Contáctanos</p>
+            <h2 data-bind="contactTitle">Haz tu pedido hoy</h2>
+            <p data-bind="contactText">Escríbenos o visítanos para disfrutar de tus granizados y cocteles favoritos.</p>
+          </div>
+          <div class="contact-card">
+            <p><strong>Teléfono:</strong> <span data-bind="phone">+57 300 123 4567</span></p>
+            <p><strong>Correo:</strong> <span data-bind="email">hola@icemix.com</span></p>
+            <p><strong>Horario:</strong> <span data-bind="hours">Lunes a Domingo · 12:00 p.m. a 10:00 p.m.</span></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer">
+        <p>© 2026 <span data-bind="brand">Ice Mix</span>. Todos los derechos reservados.</p>
+        <div id="adminAccess" class="admin-access">
+          <input id="adminPassword" type="password" placeholder="Clave de administrador" />
+          <button id="adminBtn" class="btn btn-dark">Entrar</button>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

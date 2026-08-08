@@ -1,0 +1,291 @@
+:root {
+  --primary: #ff4fa3;
+  --secondary: #3a7cff;
+  --dark: #16161f;
+  --background: #f8f6ff;
+  --text: #3d3d4f;
+  --surface: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--background);
+  line-height: 1.6;
+}
+
+input, button {
+  font: inherit;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(120deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 24px 0 80px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: white;
+  text-decoration: none;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: white;
+  color: var(--primary);
+  padding: 12px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-dark {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-light {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 24px;
+  border-radius: 20px;
+}
+
+.hero-card p {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 6px 0;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+.alt {
+  background: white;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  color: var(--dark);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card, .highlight-box, .contact-card, .config-panel {
+  background: var(--surface);
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.config-panel {
+  margin: 30px auto 0;
+  width: min(1100px, 90%);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.config-panel.hidden {
+  display: none;
+}
+
+.panel-header {
+  margin-bottom: 20px;
+}
+
+.config-form {
+  display: grid;
+  gap: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+input[type="text"] {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fff;
+}
+
+input[type="color"] {
+  width: 100%;
+  min-height: 42px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.image-section {
+  border-top: 1px solid #eee;
+  padding-top: 16px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.drink-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.status {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.footer {
+  text-align: center;
+  padding: 24px 0 40px;
+  color: #6d6d7a;
+}
+
+.admin-access {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.admin-access input {
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  padding: 10px 12px;
+  min-width: 220px;
+}
+
+.admin-access .btn {
+  padding: 10px 16px;
+}
+
+@media (max-width: 768px) {
+  .hero-content,
+  .about,
+  .contact,
+  .cards,
+  .form-grid,
+  .color-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
